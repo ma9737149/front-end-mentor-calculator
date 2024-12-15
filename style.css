@@ -1,0 +1,328 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body.theme-1{
+    background: hsl(222, 26%, 31%);
+}
+body.theme-2{
+    background: white;
+}
+body.theme-3{
+    background: #17062a;
+}
+
+
+
+
+
+.parent{
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+.app-name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.child.theme-1 .app-name{
+    color: white;
+}
+.child.theme-2 .app-name{
+    color: black;
+}
+.child.theme-3 .app-name{
+    color: #fde346;
+}
+
+
+
+
+.child{
+    width: 360px;
+}
+
+
+input:first-of-type{
+    margin-left: 10px;
+}
+
+input:not(:first-of-type){
+    margin: 0;
+}
+
+
+.numbers{
+    text-align: right;
+    margin-right: 6px;
+}
+
+.app-name-span{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.child input.display{
+    width: 100%;
+    margin-left: 0;
+    padding: 15px;
+    outline: none;
+    text-align: right;
+    font-size: 30px;
+    border-radius: 6px;
+    border: none;
+
+    color: white;
+    font-weight: bold;
+    margin-bottom: 11px;
+    margin-top: 5px;
+}
+
+.child.theme-1 input.display{
+    color: white;
+    background-color:hsl(222, 26%, 23%) ;
+}
+.child.theme-2 input.display{
+    color: black;
+    background-color:#eeeeee;
+
+}
+.child.theme-3 input.display{
+    color: yellow;
+    background-color:#1e0836;
+
+}
+
+
+
+ 
+.child .buttons{ 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 16px;
+    height: fit-content;
+    gap: 16px;
+}
+
+.child.theme-1 .buttons{
+    background-color: hsl(222, 26%, 23%);
+}
+.child.theme-2 .buttons{
+    background-color: #d3cdcd;
+}
+.child.theme-3 .buttons{
+    background-color: #1e0832;
+}
+
+
+
+
+
+.child .buttons button{
+    border: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.child.theme-1 button{
+    background-color: #e9e2da;
+    border-bottom: 2px solid hsl(25, 98%, 40%);
+}
+
+.child.theme-1 .buttons button:not(.operation-reset , .operation-delete , .operation-calc):hover{
+    background-color: #cec2b3;
+}
+
+
+.child.theme-1 button.operation-reset , 
+.child.theme-1 button.operation-delete{
+    background-color: #647299;
+    border-bottom: 2px solid #404c70;
+    color: white;
+}
+
+
+.child.theme-1 button.operation-calc {
+    background-color: #d13f30;
+    border-bottom: 2px solid #8a261c;
+}
+
+
+.child.theme-1 button.operation-reset:hover,
+.child.theme-1 button.operation-delete:hover{
+    background-color: #404c70;
+}
+/**/
+.child.theme-2 button{
+    background-color: #e5e4e0;
+    border-bottom: 2px solid #a69c91;
+}
+
+.child.theme-2 .buttons button:not(.operation-reset , .operation-delete , .operation-calc):hover{
+    background-color: #a69c91;
+}
+
+
+.child.theme-2 button.operation-reset , 
+.child.theme-2 button.operation-delete{
+    background-color: #388187;
+    border-bottom: 2px solid #1d6569;
+    color: white;
+}
+
+
+.child.theme-2 button.operation-calc {
+    background-color: #d13f30;
+    border-bottom: 2px solid #8a261c;
+}
+
+
+.child.theme-2 button.operation-reset:hover,
+.child.theme-2 button.operation-delete:hover{
+    background-color: #1d6569;
+}
+
+
+
+
+
+
+.child button.operation-calc{
+    color: white;
+    grid-area: 5 / span 2;
+}
+
+.child.theme-1 button.operation-calc:hover,
+.child.theme-2 button.operation-calc:hover{
+    background-color: #8a261c;
+}
+
+
+
+
+
+
+
+
+button.operation-reset{
+    grid-area: 5 / span 2;
+}
+
+
+input[name = 'choose-theme']{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 48px;
+    height: 20px;
+    border-radius: 7px;
+    position: relative;
+    padding: 5px;
+}
+
+.child.theme-1 input[name = 'choose-theme']{
+    background-color: #252c44;
+}
+.child.theme-2 input[name = 'choose-theme']{
+    background-color: #1e0836;
+}
+.child.theme-3 input[name = 'choose-theme']{
+    background-color: #252c44;
+}
+
+
+
+
+
+.child.theme-1 input[name = 'choose-theme']::-moz-range-thumb {
+    background-color: #8a261c;
+    border: none;
+}
+
+.child.theme-2 input[name = 'choose-theme']::-moz-range-thumb {
+    background-color: #c65606;
+    border: none;
+}
+
+.child.theme-3 input[name = 'choose-theme']::-moz-range-thumb {
+    background-color: #00dec9;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.s-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.child.theme-3 button{
+    background-color: #331b4d;
+    border-bottom: 2px solid #822198;
+    color: yellow;
+}
+
+.child.theme-3 .buttons button:not(.operation-reset , .operation-delete , .operation-calc):hover{
+    background-color: #822198;
+}
+
+
+.child.theme-3 button.operation-reset , 
+.child.theme-3 button.operation-delete{
+    background-color: #56077c;
+    border-bottom: 2px solid #b918ec;
+    color: white;
+}
+
+
+.child.theme-3 button.operation-calc {
+    background-color: #00decf;
+    border-bottom: 2px solid #6cfaf1;
+}
+.child.theme-3 button.operation-calc:hover {
+    background-color: #6cfaf1;
+}
+
+
+.child.theme-3 button.operation-reset:hover,
+.child.theme-3 button.operation-delete:hover{
+    background-color: #b918ec;
+}
+
+
+
+
+

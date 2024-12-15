@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="theme-1">
+
+
+  <div class="parent">
+    <div class="child theme-1">
+      <div class="app-name">
+        <span class="app-name-span">calc</span>
+        <div class="themes-and-check-boxes">
+          <div class="numbers">1  2  3</div>
+          <div class="s-box">
+            THEME <input type="range" name="choose-theme" id="" max="3" min="1" value="1">
+          </div>
+        </div> 
+      </div>
+
+
+      <input class="display" readonly>
+        
+      <div class="buttons">
+        <button onclick="addToDisplay(7)">7</button>
+        <button onclick="addToDisplay(8)">8</button>
+        <button onclick="addToDisplay(9)">9</button>
+        <button onclick="removeFromDisplay()" class="operation-delete">DEL</button>
+        <button onclick="addToDisplay(4)">4</button>
+        <button onclick="addToDisplay(5)">5</button>
+        <button onclick="addToDisplay(6)">6</button>
+        <button onclick="addToDisplay('+')">+</button>
+        <button onclick="addToDisplay(1)">1</button>
+        <button onclick="addToDisplay(2)">2</button>
+        <button onclick="addToDisplay(3)">3</button>
+        <button onclick="addToDisplay('-')">-</button>
+        <button onclick="addToDisplay('.')">.</button>
+        <button onclick="addToDisplay(0)">0</button>
+        <button onclick="addToDisplay('/')">/</button>
+        <button onclick="addToDisplay('*')">x</button>
+        <button onclick="resetInputIntoNull()" class="operation-reset">RESET</button>
+        <button onclick="calaulate()" class="operation-calc">=</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  
+  <script src="main.js"></script>
+</body>
+</html>
